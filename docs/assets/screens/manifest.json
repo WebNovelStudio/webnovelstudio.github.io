@@ -1,0 +1,313 @@
+{
+  "schema": 1,
+  "product": "WebNovelStudio",
+  "version": "0.8.1",
+  "capture_environment": "Windows source PySide6 Qt offscreen, scale factor 1",
+  "content_origin": "All story text, notes, advertisement examples and the PDF were newly authored for this demonstration. Actual application widgets were captured; no generated mockups.",
+  "images": [
+    {
+      "id": "reader",
+      "label": "독서 화면",
+      "alt": "TXT 본문을 두 페이지로 펼쳐 읽는 실제 독서 화면",
+      "dark": {
+        "src": "reader-dark.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 185424,
+        "sha256": "e6659f1f8ee59c3608bda7c5a2ebed2c0714de5128f23e42989f18f737033b82"
+      },
+      "light": {
+        "src": "reader-light.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 183774,
+        "sha256": "dc1bb01ffa6336742c2c274b068f37402afaf5831c14ce7876edba2819f787db"
+      }
+    },
+    {
+      "id": "search",
+      "label": "독서 화면에서 찾기",
+      "alt": "현재 책에서 단어를 찾고 전체 결과 목록을 표시하는 화면",
+      "dark": {
+        "src": "search-dark.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 148580,
+        "sha256": "610433271f4b9d8b178b362936e0be9e82ccf94c833dfcb19024431ff4514b67"
+      },
+      "light": {
+        "src": "search-light.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 149486,
+        "sha256": "b458ee532d1d2d4a4835bd5da947afc2275cbbbc6cc52750a0fb7af0b09de078"
+      }
+    },
+    {
+      "id": "reader-chapters",
+      "label": "회차 목록",
+      "alt": "인식한 회차 목록과 현재 위치를 확인하는 화면",
+      "dark": {
+        "src": "reader-chapters-dark.webp",
+        "width": 560,
+        "height": 650,
+        "bytes": 7144,
+        "sha256": "2452a2b8f9882a2f564d626f274c6893432997b58eb9919dc4652f939db79eda"
+      },
+      "light": {
+        "src": "reader-chapters-light.webp",
+        "width": 560,
+        "height": 650,
+        "bytes": 7270,
+        "sha256": "566cdd2e164f49152665f8fad6874b5a264c10ea87f4ed2e3dfea51ada7e24ef"
+      }
+    },
+    {
+      "id": "pdf",
+      "label": "PDF 원본 이미지 독서",
+      "alt": "직접 작성한 PDF를 원본 페이지 이미지로 표시하는 화면",
+      "dark": {
+        "src": "pdf-dark.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 42788,
+        "sha256": "e994d2c7d2a254d3d74def6c80c514a56be1c7ccf5aec88ffd56afc3c03c499d"
+      },
+      "light": {
+        "src": "pdf-light.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 43114,
+        "sha256": "465a3b7857db2cfec5df7f29aa7e7a7f4e4271c91d08acc3e7324cac08c5faf0"
+      }
+    },
+    {
+      "id": "cleanup",
+      "label": "마법의 글 정리",
+      "alt": "같은 본문 구간의 정리 전후를 비교하는 실제 미리보기",
+      "dark": {
+        "src": "cleanup-dark.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 111324,
+        "sha256": "a774ac352b928c2f91d8eabd590855e6bc802e824997c2d5076119542bd24dcc"
+      },
+      "light": {
+        "src": "cleanup-light.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 110850,
+        "sha256": "0e5b51c9b6f4f12b64e5f0d329071be184b99a8774dad6feba711252005d71ed"
+      }
+    },
+    {
+      "id": "replace",
+      "label": "단어 일괄 치환",
+      "alt": "시연 이야기의 이름을 바꿀 때 원문 위치와 조사 결과를 검토하는 화면",
+      "dark": {
+        "src": "replace-dark.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 61422,
+        "sha256": "b58137c2460f416ecdd489bc08aec2fda703c499ade0c8a5ba2db8200dd14f95"
+      },
+      "light": {
+        "src": "replace-light.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 68408,
+        "sha256": "df296a7ad544e5fa41ff9b3e7870a954cc49a849cd0436a379355a81b4168652"
+      }
+    },
+    {
+      "id": "ads",
+      "label": "광고 탐지",
+      "alt": "가상 홍보 문구 세 건의 판정과 제거 범위를 검토하는 화면",
+      "dark": {
+        "src": "ads-dark.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 46424,
+        "sha256": "ad7ff067cdd8098781f5abb876f6344e3c4d976f32a2e552d1ba39f800136380"
+      },
+      "light": {
+        "src": "ads-light.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 46162,
+        "sha256": "cfeb2247e9afa9678e55e5c09828c48ea2db44461862cda6e87120887e2a219b"
+      }
+    },
+    {
+      "id": "chapters",
+      "label": "스마트 회차",
+      "alt": "시연 문서의 회차 제목과 포함 여부를 검토하는 화면",
+      "dark": {
+        "src": "chapters-dark.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 46234,
+        "sha256": "fa0f08f2dc50de56cc6b5e0fef4768f8ed350cd8129ac028ea6a2f709d1336bc"
+      },
+      "light": {
+        "src": "chapters-light.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 46460,
+        "sha256": "0d72e075a1fbe2baead7054cad0cbd73d6ce47053977274a89b6442f8b28949f"
+      }
+    },
+    {
+      "id": "split",
+      "label": "텍스트 분할",
+      "alt": "회차 기준의 분할 파일과 결과 본문을 검토하는 화면",
+      "dark": {
+        "src": "split-dark.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 40466,
+        "sha256": "734e66bb729b78649524470ed4a210ecf7f00b0138a238ae2981fb0636216250"
+      },
+      "light": {
+        "src": "split-light.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 40600,
+        "sha256": "39926e2e453a88805e2ee9f17294761aa33af2c477e65bfad4208c7282c5ffdc"
+      }
+    },
+    {
+      "id": "merge",
+      "label": "텍스트 병합",
+      "alt": "시연 문서들을 회차 순서와 중복 여부에 따라 검토하는 화면",
+      "dark": {
+        "src": "merge-dark.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 68300,
+        "sha256": "9f1424b5a52523760dc0709b28cf3738f7f03f9ab1658b62146bf9d5dd58903f"
+      },
+      "light": {
+        "src": "merge-light.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 68954,
+        "sha256": "cb665309fcd868224d4d7a2cbde789c7588b4cbd3e6a3fc5d36cc18856e6bc46"
+      }
+    },
+    {
+      "id": "encoding",
+      "label": "인코딩 복구",
+      "alt": "입력 텍스트와 복구 미리보기를 나란히 비교하는 화면",
+      "dark": {
+        "src": "encoding-dark.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 101984,
+        "sha256": "1d0e2d224c377a25387953c6d15a044ecfef9dd98fa497a433e9680739655f30"
+      },
+      "light": {
+        "src": "encoding-light.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 100790,
+        "sha256": "2c8f4b0a2ce67e016b69f01ed53d5d7a528df56598117e80b10806a1d0111049"
+      }
+    },
+    {
+      "id": "base64",
+      "label": "Base64 도구",
+      "alt": "직접 작성한 짧은 문장을 Base64로 변환한 실제 화면",
+      "dark": {
+        "src": "base64-dark.webp",
+        "width": 1060,
+        "height": 650,
+        "bytes": 11252,
+        "sha256": "5d2715da48f4a1b0c8d7c8c923df50b744ac23caa404f2a98c4197eee1684fe8"
+      },
+      "light": {
+        "src": "base64-light.webp",
+        "width": 1060,
+        "height": 650,
+        "bytes": 11462,
+        "sha256": "afd9bdb9eed4813fa9de4fe40b8a8f0c89ab01a8ed245d794614b3d8d55e42bd"
+      }
+    },
+    {
+      "id": "epub_convert",
+      "label": "TXT와 EPUB 변환",
+      "alt": "TXT 원문과 EPUB 목차·본문 미리보기를 비교하는 화면",
+      "dark": {
+        "src": "epub_convert-dark.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 65240,
+        "sha256": "98f27df4a0787e24db759a296c33e276cc9d009c800dcdd55850cf864b3a78ca"
+      },
+      "light": {
+        "src": "epub_convert-light.webp",
+        "width": 1280,
+        "height": 820,
+        "bytes": 64832,
+        "sha256": "ec054a9a87fd388cd0007f08fcbe4be6fb46a2ea6c9d1de1ce03c2d502ae6930"
+      }
+    },
+    {
+      "id": "tts",
+      "label": "TTS 설정",
+      "alt": "음성·속도·피치·음량을 설정하는 실제 창",
+      "dark": {
+        "src": "tts-dark.webp",
+        "width": 740,
+        "height": 680,
+        "bytes": 18128,
+        "sha256": "3d68e0d4fc1e5344ddea1e981553f420ab3b5e0464a8ca6c711e72fb5cb9f209"
+      },
+      "light": {
+        "src": "tts-light.webp",
+        "width": 740,
+        "height": 680,
+        "bytes": 17550,
+        "sha256": "5de6cb8b97ed39dee106b001a3f71b6979f4e9f3e82bcefdf1244e8bf693295e"
+      }
+    },
+    {
+      "id": "quick-settings",
+      "label": "빠른 독서 설정",
+      "alt": "글꼴·크기·줄 간격·종이 색을 설정하는 실제 창",
+      "dark": {
+        "src": "quick-settings-dark.webp",
+        "width": 370,
+        "height": 900,
+        "bytes": 23850,
+        "sha256": "10ec8711562b9961b9e9ca4aa44d1abf6288cbc149ab1edd3d9b4f68c322fe39"
+      },
+      "light": {
+        "src": "quick-settings-light.webp",
+        "width": 370,
+        "height": 900,
+        "bytes": 23166,
+        "sha256": "38c8f9ba07bdefabb882fa6635fff7b2a2de6f43a3852ca3655028f4205d91e2"
+      }
+    },
+    {
+      "id": "notes",
+      "label": "포스트잇 메모",
+      "alt": "시연용 메모를 작성한 실제 메모 창",
+      "dark": {
+        "src": "notes-dark.webp",
+        "width": 560,
+        "height": 480,
+        "bytes": 8280,
+        "sha256": "7f80d5ed7cd42331128a0c2939be364afcdc443fe573bc0d5b1c1c9e3aa06bf7"
+      },
+      "light": {
+        "src": "notes-light.webp",
+        "width": 560,
+        "height": 480,
+        "bytes": 8220,
+        "sha256": "d994dab276038a28e997ede6fe9cde7b5e3dfb9e33ea6d0d94a4cb94cb9f47c9"
+      }
+    }
+  ]
+}
