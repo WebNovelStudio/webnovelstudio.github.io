@@ -1,0 +1,30 @@
+/* The lists keep their natural height until they need their own scroll area. */
+#release-history {
+  max-block-size: var(--history-height, 78rem);
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.guestbook {
+  display: flex;
+  flex-direction: column;
+  /* Account for the desktop header, first-view spacing and a small bottom gap. */
+  max-block-size: max(30rem, min(44rem, calc(100svh - 142px)));
+}
+.guestbook > :not(.guest-feed) { flex: none; }
+.guestbook > .guest-feed {
+  flex: 0 1 auto;
+  min-block-size: 0;
+  max-block-size: none;
+}
+.guestbook #post-body { max-block-size: 10rem; }
+
+#release-history:focus-visible, #guest-feed:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+@media (max-width: 850px) {
+  /* On narrow screens the card sits below the introduction. */
+  .guestbook { max-block-size: max(30rem, min(38rem, 100svh)); }
+}

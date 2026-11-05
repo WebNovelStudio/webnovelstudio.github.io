@@ -41,5 +41,22 @@ try{
   document.querySelector('#release-label').textContent=`Windows x64 · 기본 배포판 ${status.baseline} · 최신 공개판 ${status.latest}`;
  }
  const history=document.querySelector('#release-history');
- if(Array.isArray(status.releases)&&status.releases.length){history.replaceChildren();for(const release of status.releases){const article=element('article',undefined,'release-entry');article.append(element('h3',release.version));const list=element('ul');for(const line of release.changes||[])list.append(element('li',line));article.append(list);history.append(article);}}
+ if(Array.isArray(status.releases)&&status.releases.length){
+  // Keep the height of the five releases already visible when scrolling was added.
+  const referenceVersions=new Set(['0.8.6','0.8.5','0.8.4','0.8.3','0.8.2']),reference=[];
+  const entries=document.createDocumentFragment();
+  for(const release of status.releases){
+   const article=element('article',undefined,'release-entry');article.append(element('h3',release.version));
+   const list=element('ul');for(const line of release.changes||[])list.append(element('li',line));
+   article.append(list);entries.append(article);
+   if(referenceVersions.delete(release.version))reference.push(article);
+  }
+  history.replaceChildren(entries);
+  if(referenceVersions.size===0){
+   const fit=()=>history.style.setProperty('--history-height',`${Math.ceil(reference.reduce((height,entry)=>height+entry.getBoundingClientRect().height,0))}px`);
+   fit();
+   const observer=new ResizeObserver(fit);
+   for(const entry of reference)observer.observe(entry);
+  }
+ }
 }catch{/* A release metadata outage must never block the page. */}
