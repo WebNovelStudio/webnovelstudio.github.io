@@ -1,10 +1,19 @@
 {
   "baseline": "0.8.1",
-  "latest": "0.8.2",
+  "latest": "0.8.3",
   "download": "https://github.com/WebNovelStudio/webnovelstudio.github.io/releases/download/v0.8.1/WebNovelStudio.0.8.1.zip",
   "sha256": "06f2bf0cf8a2c36d81159e53dae8fdf0f0a7f86cbe30ba5613d54c96b1f4ebd5",
   "bytes": 588435567,
   "releases": [
+    {
+      "version": "0.8.3",
+      "changes": [
+        "정상 완료된 업데이트의 다운로드 ZIP·압축 해제 파일·도우미 사본을 안전한 시점에 자동 정리합니다.",
+        "현재 설치본과 일치하는 검증된 직전 복구 백업 한 개를 유지해 업데이트 자료의 누적을 줄입니다.",
+        "업데이트 취소·실패·복구·파일 사용 중 상태를 구분하고, 정리 실패는 프로그램 시작이나 업데이트 성공을 방해하지 않도록 처리합니다.",
+        "사이드 메뉴로 기능 창을 열 때 설정 칸이 잠깐 독립 창으로 나타나던 깜박임 원인을 수정했습니다."
+      ]
+    },
     {
       "version": "0.8.2",
       "changes": [
