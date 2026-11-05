@@ -1,8 +1,20 @@
 {
   "baseline": "0.8.1",
-  "latest": "0.8.1",
+  "latest": "0.8.2",
   "download": "https://github.com/WebNovelStudio/webnovelstudio.github.io/releases/download/v0.8.1/WebNovelStudio.0.8.1.zip",
   "sha256": "06f2bf0cf8a2c36d81159e53dae8fdf0f0a7f86cbe30ba5613d54c96b1f4ebd5",
   "bytes": 588435567,
-  "releases": []
+  "releases": [
+    {
+      "version": "0.8.2",
+      "changes": [
+        "독서 도구의 정크 지우기 · 패턴 관리 메뉴에 사이드 메뉴와 같은 정크 지우기 아이콘을 표시합니다.",
+        "독서 도구의 광고 표시 메뉴에 하단 도구와 같은 광고 탐지 아이콘을 표시합니다. 밝은·어두운 테마를 함께 따릅니다.",
+        "광고 딥 스캔 독서 화면의 이름을 광고 탐지 독서 화면으로, 하단 하이드 도구 이름을 광고 탐지로 변경했습니다.",
+        "홈페이지와 업데이트 저장소를 WebNovelStudio.github.io로 이전했습니다. 새 주소의 0.8.1 전체 배포판에서 업데이트를 시작합니다.",
+        "홈페이지에 TXT·EPUB·PDF 각 네 장의 실제 두 페이지 화면과 다양한 가벼운 화면 전환을 추가했습니다.",
+        "한글 TXT·EPUB 검색 정보를 정리하고 방명록의 불필요한 문구를 제거했습니다."
+      ]
+    }
+  ]
 }
