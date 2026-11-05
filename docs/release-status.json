@@ -1,10 +1,18 @@
 {
   "baseline": "0.8.1",
-  "latest": "0.8.5",
+  "latest": "0.8.6",
   "download": "https://github.com/WebNovelStudio/webnovelstudio.github.io/releases/download/v0.8.1/WebNovelStudio.0.8.1.zip",
   "sha256": "06f2bf0cf8a2c36d81159e53dae8fdf0f0a7f86cbe30ba5613d54c96b1f4ebd5",
   "bytes": 588435567,
   "releases": [
+    {
+      "version": "0.8.6",
+      "changes": [
+        "업데이트 확인이 다른 작업에 밀리지 않도록 분리하고, 버전 확인·다운로드·검증·재실행 대기 상태를 구분해 표시합니다.",
+        "Windows가 프로그램 파일 교체를 잠시 거부하면 자동으로 다시 시도합니다. 복구 시 이미 원래 내용과 일치하는 파일은 그대로 둡니다.",
+        "업데이트가 실패하면 기존 설치가 안전한지 확인해 다시 열고, 실패 이유와 다시 시도할 방법을 보여 줍니다. 새 프로그램이 화면을 표시하고 응답을 시작한 뒤 재실행을 확인합니다."
+      ]
+    },
     {
       "version": "0.8.5",
       "changes": [
