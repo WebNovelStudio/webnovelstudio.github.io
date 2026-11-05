@@ -1,10 +1,16 @@
 {
   "baseline": "0.8.1",
-  "latest": "0.8.4",
+  "latest": "0.8.5",
   "download": "https://github.com/WebNovelStudio/webnovelstudio.github.io/releases/download/v0.8.1/WebNovelStudio.0.8.1.zip",
   "sha256": "06f2bf0cf8a2c36d81159e53dae8fdf0f0a7f86cbe30ba5613d54c96b1f4ebd5",
   "bytes": 588435567,
   "releases": [
+    {
+      "version": "0.8.5",
+      "changes": [
+        "큰 글자와 좁은 창에서 본문이 잘리지 않도록 한 페이지·두 페이지의 조판을 고쳤습니다. 들어가지 않는 줄은 다음 페이지에 온전히 표시합니다."
+      ]
+    },
     {
       "version": "0.8.4",
       "changes": [
