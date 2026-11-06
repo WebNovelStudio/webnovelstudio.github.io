@@ -1,10 +1,18 @@
 {
   "baseline": "0.9.1",
-  "latest": "0.9.1",
+  "latest": "0.9.2",
   "download": "https://github.com/WebNovelStudio/webnovelstudio.github.io/releases/download/v0.9.1/WebNovelStudio.0.9.1.zip",
   "sha256": "b30809bcd18a70a860909e5d1139ba1efbf2c8d79980f5430855d5652fa26eaf",
   "bytes": 609682050,
   "releases": [
+    {
+      "changes": [
+        "TXT를 EPUB으로 변환할 때 원본 문단과 빈 줄을 각각 문단으로 저장합니다.",
+        "스마트 목차에서 회차를 찾지 못한 긴 본문은 XHTML 파일 하나가 8 MiB에 이르기 전에 문단 경계에서 나눕니다.",
+        "분할한 파일은 기존 읽기 순서로 이어집니다. 목차에는 기존 본문 항목을 유지합니다."
+      ],
+      "version": "0.9.2"
+    },
     {
       "changes": [
         "최근 독서에서 시작 시 이어 열기의 빈 체크박스가 보이도록 수정했습니다.",
