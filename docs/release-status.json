@@ -1,10 +1,19 @@
 {
   "baseline": "0.9.1",
-  "latest": "0.9.2",
+  "latest": "0.9.3",
   "download": "https://github.com/WebNovelStudio/webnovelstudio.github.io/releases/download/v0.9.1/WebNovelStudio.0.9.1.zip",
   "sha256": "b30809bcd18a70a860909e5d1139ba1efbf2c8d79980f5430855d5652fa26eaf",
   "bytes": 609682050,
   "releases": [
+    {
+      "changes": [
+        "목차 없는 TXT를 EPUB으로 변환할 때 XHTML 본문 파일을 100 KiB 미만으로 문단 경계에서 나눕니다.",
+        "최근 독서의 ‘프로그램 시작 시 최근 독서 열기’ 행 전체에 마우스 강조를 표시합니다.",
+        "평균 분량에 가까운 번호 없는 제목을 스마트 수동 인식에서 검토하고 회차 번호를 지정할 수 있습니다.",
+        "GitHub 연결의 일시 장애를 다시 시도하고 Windows 보안 연결로 복구합니다. 접속이 실패하면 원인별로 안내합니다."
+      ],
+      "version": "0.9.3"
+    },
     {
       "changes": [
         "TXT를 EPUB으로 변환할 때 원본 문단과 빈 줄을 각각 문단으로 저장합니다.",
