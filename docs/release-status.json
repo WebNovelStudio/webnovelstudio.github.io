@@ -1,10 +1,18 @@
 {
   "baseline": "0.9.1",
-  "latest": "0.9.3",
+  "latest": "0.9.4",
   "download": "https://github.com/WebNovelStudio/webnovelstudio.github.io/releases/download/v0.9.1/WebNovelStudio.0.9.1.zip",
   "sha256": "b30809bcd18a70a860909e5d1139ba1efbf2c8d79980f5430855d5652fa26eaf",
   "bytes": 609682050,
   "releases": [
+    {
+      "changes": [
+        "화면 메뉴에서 가로 스크롤바와 하단 정보 줄을 각각 숨길 수 있습니다. 모든 책과 전체 화면에 적용되며 다시 실행해도 유지됩니다.",
+        "TXT를 EPUB으로 변환할 때 기본값은 자동 확정 회차의 원본 제목을 유지하며, 스마트 수동 인식에서 승인한 회차만 제N화 제목 === 형식으로 정리합니다.",
+        "목차가 있는 회차도 XHTML이 100 KiB에 닿기 전에 문단 경계에서 나눕니다. 회차별 목차와 본문 순서는 유지합니다."
+      ],
+      "version": "0.9.4"
+    },
     {
       "changes": [
         "목차 없는 TXT를 EPUB으로 변환할 때 XHTML 본문 파일을 100 KiB 미만으로 문단 경계에서 나눕니다.",
