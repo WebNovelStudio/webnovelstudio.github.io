@@ -1,10 +1,19 @@
 {
   "baseline": "0.9.1",
-  "latest": "0.9.8",
+  "latest": "0.9.9",
   "download": "https://github.com/WebNovelStudio/webnovelstudio.github.io/releases/download/v0.9.1/WebNovelStudio.0.9.1.zip",
   "sha256": "b30809bcd18a70a860909e5d1139ba1efbf2c8d79980f5430855d5652fa26eaf",
   "bytes": 609682050,
   "releases": [
+    {
+      "changes": [
+        "스마트 회차가 제목과 본문을 함께 대조해, 정상 회차 사이의 숫자 서술·점수·목록을 제목으로 잡는 경우를 줄였습니다.",
+        "명시 제목의 한 회차 누락, 제목 뒤에 붙은 연속 번호, 반복된 저작자 표기 옆의 괄호형 제목을 더 정확하게 인식합니다.",
+        "TXT에서 EPUB을 만들 때 XHTML 본문을 압축해 용량을 줄입니다. 목차와 읽기 순서는 원문을 따릅니다.",
+        "Epub 상세 설정에서 100 KiB보다 작은 분할값을 고르면 안내합니다. 문단 크기와 한 권당 XHTML 4,995개 한도는 각각 원인과 해결 방법을 표시합니다."
+      ],
+      "version": "0.9.9"
+    },
     {
       "changes": [
         "스마트 회차에서 〈N화〉 제목, 주 회차로 쓰인 제N절, 번호가 붙은 묶음 제목과 에필로그·후일담을 인식합니다.",
