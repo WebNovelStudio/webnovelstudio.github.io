@@ -1,10 +1,18 @@
 {
   "baseline": "0.9.1",
-  "latest": "0.9.9",
+  "latest": "0.9.10",
   "download": "https://github.com/WebNovelStudio/webnovelstudio.github.io/releases/download/v0.9.1/WebNovelStudio.0.9.1.zip",
   "sha256": "b30809bcd18a70a860909e5d1139ba1efbf2c8d79980f5430855d5652fa26eaf",
   "bytes": 609682050,
   "releases": [
+    {
+      "version": "0.9.10",
+      "changes": [
+        "스마트 회차에서 제목 뒤 번호, 번호가 둘인 제목, 번호만 있는 회차의 누락을 앞뒤 회차와 본문으로 확인합니다.",
+        "번호가 붙은 본문 요약과 목록, 회차 끝 표지가 새 회차로 잡히는 경우를 줄였습니다.",
+        "원문 줄과 회차 후보를 다시 읽는 작업을 줄이고 같은 번호의 본문 비교를 빠르게 처리합니다."
+      ]
+    },
     {
       "changes": [
         "스마트 회차가 제목과 본문을 함께 대조해, 정상 회차 사이의 숫자 서술·점수·목록을 제목으로 잡는 경우를 줄였습니다.",
