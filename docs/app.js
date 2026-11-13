@@ -1,5 +1,4 @@
 import {element} from './common.js';
-document.querySelector('#download-button').addEventListener('click',event=>{if(event.currentTarget.getAttribute('aria-disabled')==='true')event.preventDefault();});
 const groups=[
  {name:'독서·탐색',items:[['reader','한 화면에, 나만의 독서 흐름.','TXT·EPUB·PDF를 열고 한 페이지·두 페이지 보기로 편하게 읽으세요. 읽던 위치와 책별 표시 설정을 이어갑니다.'],['search','찾은 문장으로, 정확하게.','검색어·정규식과 결과 목록으로 원하는 곳을 찾습니다. 결과를 골랐을 때 그 위치로 이동합니다.'],['reader-chapters','이야기의 길을 한눈에.','회차 목록을 보고 원하는 곳으로 이동하세요. 본문과 연결된 회차 위치를 사용합니다.'],['pdf','원본 페이지를 그대로.','PDF는 페이지 이미지로 읽습니다. 원본의 그림과 지면을 유지하며 보기 설정을 조절합니다.']]},
  {name:'글 정리·광고',items:[['cleanup','흐트러진 문장을, 읽기 편하게.','인용부호·문장 연결·공백·빈 줄·문단 정리를 비교 화면에서 확인합니다. 저장할 결과를 먼저 살펴보세요.'],['ads','의심 문구를 살펴보고 결정하세요.','광고의 판정 근거와 원문 구간을 검토합니다. 확정과 모호한 항목을 구분해 정상 본문을 보호합니다.']]},
@@ -37,26 +36,17 @@ try{
  const response=await fetch('release-status.json',{cache:'no-cache'});if(!response.ok)throw Error();const status=await response.json();
  if(status.download&&status.latest){
   const target=new URL(status.download);if(target.origin!=='https://github.com'||!/^\/WebNovelStudio\/webnovelstudio\.github\.io\/releases\/(?:download\/|latest\/download\/)/i.test(target.pathname))throw Error();
-  const button=document.querySelector('#download-button');button.href=target.href;button.removeAttribute('aria-disabled');button.textContent='Windows 배포본 받기 ↓';
-  document.querySelector('#release-label').textContent=`Windows x64 · 기본 배포판 ${status.baseline} · 최신 공개판 ${status.latest}`;
+  const button=document.querySelector('#download-button');button.href=target.href;button.textContent='Windows 배포본 받기 ↓';
+  document.querySelector('#release-label').textContent=`Windows x64 · 전체 배포판 ${status.baseline} · 최신 공개판 ${status.latest} · 압축을 풀고 WebNovelStudio.exe 실행`;
  }
  const history=document.querySelector('#release-history');
  if(Array.isArray(status.releases)&&status.releases.length){
-  // Keep the height of the five releases already visible when scrolling was added.
-  const referenceVersions=new Set(['0.8.6','0.8.5','0.8.4','0.8.3','0.8.2']),reference=[];
   const entries=document.createDocumentFragment();
   for(const release of status.releases){
-   const article=element('article',undefined,'release-entry');article.append(element('h3',release.version));
+   const article=element('article',undefined,'release-entry');article.append(element('h3',release.title || release.version));
    const list=element('ul');for(const line of release.changes||[])list.append(element('li',line));
    article.append(list);entries.append(article);
-   if(referenceVersions.delete(release.version))reference.push(article);
   }
   history.replaceChildren(entries);
-  if(referenceVersions.size===0){
-   const fit=()=>history.style.setProperty('--history-height',`${Math.ceil(reference.reduce((height,entry)=>height+entry.getBoundingClientRect().height,0))}px`);
-   fit();
-   const observer=new ResizeObserver(fit);
-   for(const entry of reference)observer.observe(entry);
-  }
  }
 }catch{/* A release metadata outage must never block the page. */}

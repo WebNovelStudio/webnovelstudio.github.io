@@ -1,6 +1,6 @@
 /* The lists keep their natural height until they need their own scroll area. */
 #release-history {
-  max-block-size: var(--history-height, 78rem);
+  max-block-size: min(38rem, 70vh);
   overflow: auto;
   scrollbar-width: thin;
 }
