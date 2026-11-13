@@ -1,10 +1,20 @@
 {
-  "baseline": "1.0.1",
-  "latest": "1.0.1",
-  "download": "https://github.com/WebNovelStudio/webnovelstudio.github.io/releases/download/v1.0.1/WebNovelStudio.1.0.1.zip",
-  "sha256": "0866ee5c6f2b9fc48443cde70c17e39633580f303eb8449ac813b5493da047f5",
-  "bytes": 616937751,
+  "baseline": "1.0.2",
+  "latest": "1.0.2",
+  "download": "https://github.com/WebNovelStudio/webnovelstudio.github.io/releases/download/v1.0.2/WebNovelStudio.1.0.2.zip",
+  "sha256": "1081fd1f41b6e9291184921748aecb68e7783f62f104888eb642fb139f2f0162",
+  "bytes": 617154734,
   "releases": [
+    {
+      "version": "1.0.2",
+      "changes": [
+        "책을 열면 저장된 독서 기능을 준비하는 동안 회차를 인식해 전체 회차 수를 표시합니다.",
+        "마법의 글 정리, 정크 지우기, 광고 탐지, 외국어 독음과 독서 단어 치환을 함께 적용할 때 반복해서 읽고 계산하던 작업을 줄였습니다.",
+        "독서 기능이 적용된 TXT도 PC 사양에 맞춰 전체 쪽수를 계산합니다.",
+        "독서 기능이 준비되는 중에도 한 번씩 페이지를 넘기면 애니메이션이 표시됩니다.",
+        "Windows x64용 1.0.2 전체 배포판과 이전 공개 버전용 누적 패치를 제공합니다."
+      ]
+    },
     {
       "version": "1.0.1",
       "changes": [
