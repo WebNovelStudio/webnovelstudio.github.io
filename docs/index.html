@@ -11,7 +11,7 @@
  <title>웹소설 스튜디오 | 무료 텍스트·TXT·EPUB·이펍 뷰어</title>
  <link rel="canonical" href="https://webnovelstudio.github.io/"><link rel="stylesheet" href="hero.css">
  <meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:url" content="https://webnovelstudio.github.io/"><meta property="og:title" content="WebNovelStudio · 무료 텍스트·이펍 뷰어"><meta property="og:description" content="TXT·EPUB·PDF를 읽고, 글을 정리하고, 로컬 TTS로 이어 들으세요.">
- <link rel="icon" href="assets/brand/wns-64.png" type="image/png"><link rel="apple-touch-icon" href="assets/brand/wns-192.png"><meta property="og:image" content="https://webnovelstudio.github.io/assets/brand/wns-512.png"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="panel-scroll.css"><script type="module" src="app.js"></script><script type="module" src="guestbook.js"></script><script type="module" src="hero.js"></script>
+ <link rel="icon" href="assets/brand/wns-64.png" type="image/png"><link rel="apple-touch-icon" href="assets/brand/wns-192.png"><meta property="og:image" content="https://webnovelstudio.github.io/assets/brand/wns-512.png"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="panel-scroll.css?v=20261114"><link rel="stylesheet" href="guestbook.css"><script type="module" src="app.js"></script><script type="module" src="guestbook.js?v=20261114"></script><script type="module" src="hero.js"></script>
 </head>
 <body>
  <a class="skip" href="#main">본문으로 이동</a>
@@ -33,7 +33,10 @@
    <aside class="guestbook" aria-label="방명록">
     <form id="post-form"><div class="form-pair"><label>닉네임<input name="nickname" required autocomplete="nickname" placeholder="어떻게 불러드릴까요?"></label><label>글 비밀번호<input name="password" type="password" required minlength="8" maxlength="64" autocomplete="new-password" placeholder="8자 이상"></label></div><label class="sr-only" for="post-body">방명록 내용</label><textarea id="post-body" name="body" rows="4" required placeholder="300자 안의 이야기를 남겨주세요."></textarea><div class="composer-bottom"><span id="post-count">0 / 300</span><button class="button primary small" type="submit">글 남기기 <span aria-hidden="true">↗</span></button></div></form>
     <p class="status" id="post-status" role="status" aria-live="polite"></p>
-    <div class="feed-heading"><h3 id="guest-feed-title">남겨주신 이야기</h3><button class="text-button" id="feed-refresh" type="button">새로고침</button></div><div id="guest-feed" class="guest-feed" role="region" aria-labelledby="guest-feed-title" tabindex="0" aria-busy="true"><p class="muted">이야기를 불러오는 중이에요.</p></div><button class="text-button more" id="feed-more" type="button" hidden>이전 글 더 보기</button>
+    <div class="feed-heading"><h3 id="guest-feed-title">남겨주신 이야기</h3><button class="text-button" id="feed-refresh" type="button">새로고침</button></div>
+    <div id="guest-feed" class="guest-feed" role="region" aria-labelledby="guest-feed-title" tabindex="0" aria-busy="true"><p class="muted">이야기를 불러오는 중이에요.</p></div>
+    <nav id="feed-pages" class="feed-pages" aria-label="방명록 페이지" hidden></nav>
+    <p id="feed-status" class="status" role="status"></p>
    </aside>
   </div>
   <section class="feature-section section-space" id="features"><div class="wrap"><div class="section-heading reveal"><p class="eyebrow">하나의 앱, 다양한 쓰임</p><h2>이런 순간에,<br>스튜디오를 열어보세요.</h2><p>소개 이미지가 아닌 실제 프로그램 화면입니다.<br>관심 있는 기능을 골라 확인해 보세요.</p></div><div class="feature-groups" id="feature-groups" aria-label="기능 종류"></div><div class="feature-stage"><div class="feature-description"><p class="eyebrow" id="feature-overline"></p><h3 id="feature-title"></h3><p id="feature-copy"></p><div id="feature-options" class="feature-options" aria-label="상세 기능"></div><span class="minor-note">촬영용으로 직접 작성한 문서를 사용했습니다.</span></div><button class="feature-shot screenshot-button" id="feature-shot" aria-label="선택한 기능 화면 크게 보기"><picture><source id="feature-dark" media="(prefers-color-scheme: dark)"><img id="feature-image" width="1280" height="880" loading="lazy" decoding="async" alt=""></picture><span class="zoom-label">크게 보기 ↗</span></button></div></div></section>
@@ -42,5 +45,18 @@
  </main>
  <footer class="wrap"><a class="brand" href="./">WebNovelStudio</a><p>읽고, 정리하고, 이어 듣는 나만의 작업실.</p><a href="https://github.com/WebNovelStudio/webnovelstudio.github.io">GitHub ↗</a><a href="manage/">방명록 관리</a></footer>
  <dialog id="image-dialog" class="image-dialog"><button class="dialog-close" type="button" aria-label="이미지 닫기">닫기 ×</button><picture><source id="zoom-dark" media="(prefers-color-scheme: dark)"><img id="zoom-image" alt="확대한 실제 프로그램 화면"></picture></dialog>
- <dialog id="edit-dialog" class="edit-dialog"><form id="edit-form"><div class="dialog-heading"><h2 id="edit-title">내 글 수정</h2><button class="text-button" type="button" id="edit-close">닫기 ×</button></div><label>닉네임<input name="nickname" required></label><label>글 내용<textarea name="body" rows="6" required></textarea></label><p id="edit-count" class="muted">0 / 300</p><label>이 글의 비밀번호<input name="password" type="password" required minlength="8" maxlength="64" autocomplete="current-password"></label><p class="status" id="edit-status" role="status"></p><div class="dialog-actions"><button class="button quiet danger" id="post-delete" type="button">내 글 삭제</button><button class="button primary" type="submit">수정 저장</button></div><p class="form-hint">내 글 삭제는 되돌릴 수 없습니다.</p></form></dialog>
+ <dialog id="comment-dialog" class="edit-dialog comment-dialog" aria-labelledby="comment-title">
+  <form id="comment-form">
+   <div class="dialog-heading"><h2 id="comment-title">댓글 쓰기</h2><button class="text-button" type="button" id="comment-close">닫기 ×</button></div>
+   <div class="comment-target"><strong id="comment-parent-name"></strong><p id="comment-parent-text"></p></div>
+   <div class="form-pair">
+    <label>닉네임<input name="nickname" required autocomplete="nickname" placeholder="어떻게 불러드릴까요?"></label>
+    <label>댓글 비밀번호<input name="password" type="password" required minlength="8" maxlength="64" autocomplete="new-password" placeholder="8자 이상"></label>
+   </div>
+   <label class="sr-only" for="comment-body">댓글 내용</label><textarea id="comment-body" name="body" rows="4" required placeholder="300자 안의 댓글을 남겨주세요."></textarea>
+   <div class="composer-bottom"><span id="comment-count">0 / 300</span><button class="button primary small" type="submit">댓글 남기기</button></div>
+   <p class="status" id="comment-status" role="status"></p>
+  </form>
+ </dialog>
+ <dialog id="edit-dialog" class="edit-dialog" aria-labelledby="edit-title"><form id="edit-form"><div class="dialog-heading"><h2 id="edit-title">내 글 수정</h2><button class="text-button" type="button" id="edit-close">닫기 ×</button></div><label>닉네임<input name="nickname" required></label><label><span id="edit-body-label">글 내용</span><textarea name="body" rows="6" required></textarea></label><p id="edit-count" class="muted">0 / 300</p><label><span id="edit-password-label">이 글의 비밀번호</span><input name="password" type="password" required minlength="8" maxlength="64" autocomplete="current-password"></label><p class="status" id="edit-status" role="status"></p><div class="dialog-actions"><button class="button quiet danger" id="post-delete" type="button">내 글 삭제</button><button class="button primary" type="submit">수정 저장</button></div><p class="form-hint" id="edit-delete-hint">내 글 삭제는 되돌릴 수 없습니다.</p></form></dialog>
 </body></html>

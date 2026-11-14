@@ -8,14 +8,14 @@
 .guestbook {
   display: flex;
   flex-direction: column;
-  /* Account for the desktop header, first-view spacing and a small bottom gap. */
-  max-block-size: max(30rem, min(44rem, calc(100svh - 142px)));
+  --guestbook-original-limit: max(30rem, min(44rem, calc(100svh - 142px)));
 }
 .guestbook > :not(.guest-feed) { flex: none; }
 .guestbook > .guest-feed {
   flex: 0 1 auto;
   min-block-size: 0;
-  max-block-size: none;
+  /* Double the prior list space without counting the new links below it. */
+  max-block-size: max(8rem, calc(2 * (var(--guestbook-original-limit) - var(--guestbook-fixed-height, 0px))));
 }
 .guestbook #post-body { max-block-size: 10rem; }
 
@@ -25,6 +25,5 @@
 }
 
 @media (max-width: 850px) {
-  /* On narrow screens the card sits below the introduction. */
-  .guestbook { max-block-size: max(30rem, min(38rem, 100svh)); }
+  .guestbook { --guestbook-original-limit: max(30rem, min(38rem, 100svh)); }
 }
