@@ -37,7 +37,7 @@ try{
  if(status.download&&status.latest){
   const target=new URL(status.download);if(target.origin!=='https://github.com'||!/^\/WebNovelStudio\/webnovelstudio\.github\.io\/releases\/(?:download\/|latest\/download\/)/i.test(target.pathname))throw Error();
   const button=document.querySelector('#download-button');button.href=target.href;button.textContent='Windows 배포본 받기 ↓';
-  document.querySelector('#release-label').textContent=`Windows x64 · 전체 배포판 ${status.baseline} · 최신 공개판 ${status.latest} · 압축을 풀고 WebNovelStudio.exe 실행`;
+  document.querySelector('#release-label').textContent=`Windows x64 · 전체 배포판 ${status.baseline} · 최신 패치 ${status.latest} · 압축을 풀고 WebNovelStudio.exe 실행`;
  }
  const history=document.querySelector('#release-history');
  if(Array.isArray(status.releases)&&status.releases.length){
