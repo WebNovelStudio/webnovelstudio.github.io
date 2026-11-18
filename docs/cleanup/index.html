@@ -12,8 +12,8 @@
   <link rel="icon" href="../assets/brand/wns-64.png" type="image/png">
   <link rel="apple-touch-icon" href="../assets/brand/wns-192.png">
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="style.css">
-  <script type="module" src="app.js"></script>
+  <link rel="stylesheet" href="style.css?v=preview-1">
+  <script type="module" src="app-preview.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">본문으로 이동</a>
@@ -49,10 +49,28 @@
 
         <div class="cleanup-actions">
           <button id="apply" class="button primary" type="submit" disabled>적용</button>
-          <a id="download" class="cleanup-download" hidden>정리된 TXT 다운로드 <span aria-hidden="true">↓</span></a>
         </div>
       </form>
       <p id="cleanup-status" class="cleanup-status" role="status" aria-atomic="true"></p>
+      <section id="cleanup-preview" class="cleanup-preview" aria-labelledby="preview-title" hidden>
+        <h2 id="preview-title">정리 전후 미리보기</h2>
+        <p id="preview-location" class="preview-location" aria-live="polite"></p>
+        <div class="preview-grid">
+          <div class="preview-pane preview-before">
+            <h3 id="preview-before-label">원문</h3>
+            <pre id="preview-before" tabindex="0" aria-labelledby="preview-before-label"></pre>
+          </div>
+          <div class="preview-pane preview-after">
+            <h3 id="preview-after-label">정리 결과</h3>
+            <pre id="preview-after" tabindex="0" aria-labelledby="preview-after-label"></pre>
+          </div>
+        </div>
+        <div id="preview-navigation" class="preview-navigation" hidden>
+          <button id="preview-prev" type="button" aria-controls="preview-before preview-after">이전 변경</button>
+          <button id="preview-next" type="button" aria-controls="preview-before preview-after">다음 변경</button>
+        </div>
+      </section>
+      <a id="download" class="cleanup-download" hidden>정리된 TXT 다운로드 <span aria-hidden="true">↓</span></a>
       <noscript><p>글 정리를 사용하려면 브라우저에서 자바스크립트를 켜 주세요.</p></noscript>
     </section>
   </main>
