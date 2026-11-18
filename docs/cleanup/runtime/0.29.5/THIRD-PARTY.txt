@@ -1,0 +1,10 @@
+Pyodide 0.29.5
+The runtime files are from the official Pyodide core release. The source code
+and corresponding release are available at the following addresses.
+https://github.com/pyodide/pyodide/tree/05804b32e55628ad2269655f3c5a097fb4a966ee
+https://github.com/pyodide/pyodide/releases/tag/0.29.5
+See LICENSE-Pyodide for the Mozilla Public License 2.0.
+
+CPython 3.13.2
+https://github.com/python/cpython/tree/v3.13.2
+See LICENSE-CPython for the Python Software Foundation license and notices.

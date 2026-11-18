@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="마법의 글 정리로 TXT의 인용부호, 문단 앞 공백, 잘린 문장과 빈 줄을 브라우저에서 정리하세요.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <title>마법의 글 정리 · 웹소설 스튜디오</title>
+  <link rel="canonical" href="https://webnovelstudio.github.io/cleanup/">
+  <link rel="icon" href="../assets/brand/wns-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/brand/wns-192.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 이동</a>
+  <header class="site-header cleanup-header">
+    <a class="brand" href="../"><img class="brand-icon" src="../assets/brand/wns-64.webp" width="34" height="34" alt=""><span>WebNovel<span class="muted">Studio</span></span></a>
+    <a class="cleanup-home" href="../">홈페이지</a>
+  </header>
+  <main id="main" class="cleanup-main">
+    <h1>마법의 글 정리</h1>
+    <p class="cleanup-intro">TXT 파일을 선택하고 원하는 정리 옵션을 체크하세요. 파일은 브라우저 안에서만 처리됩니다.</p>
+
+    <section class="cleanup-panel" aria-label="TXT 글 정리">
+      <form id="cleanup-form" autocomplete="off">
+        <label class="file-label" for="source-file">원본 TXT</label>
+        <div class="file-picker">
+          <input id="source-file" type="file" accept=".txt,text/plain" aria-describedby="file-limit file-name">
+          <span class="file-picker-button" aria-hidden="true">파일 선택</span>
+          <span id="file-name">선택한 파일이 없습니다.</span>
+        </div>
+        <p id="file-limit" class="file-limit">TXT 파일 1개 · 최대 32 MiB</p>
+
+        <fieldset class="cleanup-options">
+          <legend>정리 옵션</legend>
+          <div class="cleanup-option-grid">
+            <label><input type="checkbox" name="quote_normalize" checked>인용부호 통일</label>
+            <label><input type="checkbox" name="join_sentences">잘린 문장 연결</label>
+            <label><input type="checkbox" name="split_dialogue">대화문 분리</label>
+            <label><input type="checkbox" name="leading_spaces" checked>문단 앞 공백 정리</label>
+            <label><input type="checkbox" name="blank_lines">빈 줄 정리</label>
+            <label><input type="checkbox" name="split_long_paragraphs">긴 문단 분리</label>
+          </div>
+        </fieldset>
+
+        <div class="cleanup-actions">
+          <button id="apply" class="button primary" type="submit" disabled>적용</button>
+          <a id="download" class="cleanup-download" hidden>정리된 TXT 다운로드 <span aria-hidden="true">↓</span></a>
+        </div>
+      </form>
+      <p id="cleanup-status" class="cleanup-status" role="status" aria-atomic="true"></p>
+      <noscript><p>글 정리를 사용하려면 브라우저에서 자바스크립트를 켜 주세요.</p></noscript>
+    </section>
+  </main>
+</body>
+</html>
